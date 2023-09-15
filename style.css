@@ -44,10 +44,9 @@ display: flex;
 .flex-1 {
 flex: 1;
 }
+
 .container {
 padding: 50px 0;
-
-
 }
 
 
@@ -56,7 +55,7 @@ width: 100%;
 max-width: 800px;
 }
 
-.text--purple {
+.text-purple {
 color:#6030b1
 }
 
@@ -132,6 +131,7 @@ flex-direction: column;
 .about-me__info {
 display: flex;
 flex-direction: column;
+max-width: 100%;
 }
 
 
@@ -186,8 +186,57 @@ padding: 0 16px;
 flex: 1;
 display: flex;
 align-items: center;
+justify-content: center;
 }
 
 .about-me__image {
-width: 100%;
+max-width: 100%;
+}
+
+/* TECH - STACK */
+
+.language__image {
+    width: 100%;
+    max-width: 100px;
+    transform: all 300ms;
+}
+
+.language:hover .language__image {
+filter: brightness(85%);
+opacity: 0.86;
+transform: scale(0.9);
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.language__image--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
 }
